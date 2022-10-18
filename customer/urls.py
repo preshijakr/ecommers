@@ -1,9 +1,13 @@
 from django.urls import path
 from . import views
 
+app_name='customer'
 urlpatterns = [
-    path('home',views.customer_home),
-    path('cart',views.customer_cart),
-    path('profile',views.customer_profile),
-    path('order',views.customer_order)
+    path('customer_home',views.customer_home,name='customer_home'),
+    path('cart',views.cart, name='customer_cart'),
+    path('password',views.change_password),
+    path('myorders',views.myorders),
+    path('details',views.product_details)
+    
+
 ]
